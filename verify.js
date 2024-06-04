@@ -9,9 +9,9 @@ const etherscanApiKey = process.env.ETHERSCAN_API_KEY
 
 // Mapping of view method names to which contract they should point to
 const contractMap = {
-  // rocketNetworkSnapshots: 'RocketNetworkSnapshots',
-  // rocketNetworkVoting: 'RocketNetworkVoting',
-  // rocketDAOProtocolSettingsProposals: 'RocketDAOProtocolSettingsProposals',
+  rocketNetworkSnapshots: 'RocketNetworkSnapshots',
+  rocketNetworkVoting: 'RocketNetworkVoting',
+  rocketDAOProtocolSettingsProposals: 'RocketDAOProtocolSettingsProposals',
   rocketDAOProtocolVerifier: 'RocketDAOProtocolVerifier',
   rocketDAOSecurity: 'RocketDAOSecurity',
   rocketDAOSecurityActions: 'RocketDAOSecurityActions',
@@ -49,7 +49,7 @@ switch (process.env.NETWORK) {
     etherscanApiUrl = 'https://api-holesky.etherscan.io'
     break
   case 'mainnet':
-    upgradeAddress = ''
+    upgradeAddress = '0x5dC69083B68CDb5c9ca492A0A5eC581e529fb73C'
     etherscanApiUrl = 'https://api.etherscan.io'
     break
   default:
